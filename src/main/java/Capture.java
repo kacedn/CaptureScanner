@@ -14,10 +14,9 @@ public class Capture {
         System.out.println("Start capture!!");
 
 // Selection de la source de capture TWAIN ou sane thanks to Morena framework
-        MorenaSource source=Morena.selectSource(null);
-//        to skip the first the first dialog Box
-//        TwainManager.selectSource(null);
+//        MorenaSource source=Morena.selectSource(null); // show dialog Box with two choice Twain or Sane
 //        SaneConnection.selectSource(null);
+        MorenaSource source=TwainManager.selectSource(null);
 
         System.err.println("Selected source is "+source);
 

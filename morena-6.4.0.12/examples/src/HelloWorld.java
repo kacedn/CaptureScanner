@@ -6,13 +6,11 @@ import SK.gnome.twain.TwainManager;
 import SK.gnome.twain.TwainSource;
 
 public class HelloWorld
-{
-  public static void main(String[] args) throws MorenaException{
-    MorenaSource source=Morena.selectSource(null);
+{ public static void main(String[] args) throws MorenaException
+  { MorenaSource source=Morena.selectSource(null);
     System.err.println("Selected source is "+source);
-
-    if (source!=null){
-      //source.maskUnsupportedCapabilityException(false); // Lesson 3
+    if (source!=null)
+    { //source.maskUnsupportedCapabilityException(false); // Lesson 3
       //source.maskBadValueException(false);              // Lesson 3
     	source.setVisible(false);                         // Lesson 2
       source.setColorMode();                            // Lesson 2
