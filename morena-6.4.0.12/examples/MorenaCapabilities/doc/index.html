@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="gnome.css" type="text/css">
+</head>
+<body>
+<h2>MorenaCapabilities library example</h2>
+MorenaCapabilities library allows these new features:
+<ol>
+	<li>Pops up pure Java user interface windows to allow users to set the required scanning capabilities (options in Sane).</li>
+	<li>It remembers the last used interface (Twain/Sane), last used hardware, last used capabilities and their values.</li>
+</ol>
+
+<h2>Morena Capabilities Example contains three buttons</h2>
+<ul>
+	<li><b>Select source</b> = selects new source: Twain (MS Windows, MAC OS X) or Sane (Linux, MAC OS X)</li>
+	<li><b>Custom dialog window</b> = pops up a dialog window.<br>
+	The window will display the last used capabilities with the last used values. It contains "Select capabilities" button through which users can select
+	their preferable capabilities. All capabilities supported by the source will be offered. <br>
+	By default, the library will restart the source after the image preview; because of frequent source's bugs. Users can switch this feature off by
+	selecting "Preferences" button. The restart can take longer in case of some sources. Users can set up the preferred waiting time before the source
+	starts up again.</li>
+	<li><b>Repeat scan</b> = acquires the image from the last used source setting the last used capabilities.<br>
+	This is the often required "One button scanning" solution.</li>
+</ul>
+
+<h2>International support</h2>
+MorenaCapabilities library is designed to pop up it's User Interface with the preferable language. To introduce your language, follow this scenario:
+<ol>
+	<li>Duplicate messages.properties file located in the resources directory of the morena.jar file.</li>
+	<li>Rename the new duplicated file according to your locale's language and country. For more information see documentation to the
+	ResourceBundle.getBundle method. E.g in our country - Slovakia - the name of the file have to be messages_sk_SK.properties. The language and country
+	codes are available e.g. <a href="http://download.oracle.com/javase/tutorial/i18n/locale/create.html">here</a>.</li>
+	<li>Translate messages to your language. Use Latin-1 or Unicode-encoded characters only. You can use Java's native2ascii utility to convert your
+	native-encoded characters to the required encoding. See our messages_sk_SK.properties to check, how can such a file look like.</li>
+	<li>You need to include the new properties file to the classpath of your project. You have more possibilities, how to do it.
+	<ul>
+		<li>You can add it to resources directory of the morena.jar file. If you plan to use morena.jar in the applet, you will also need to sign the
+		jar file again.</li>
+		<li>You can create your own resources directory. (It is necessary to use resources directory, because Morena looks for messages in the
+		resources directory of it's classpath.) Move your property file to this directory. Add the directory to the classpath of your project.</li>
+	</ul>
+	</li>
+	<li>Set up your required locale's language and country as a -D system properties of the VM arguments, when you run your project. E.g. to use
+	locales in Slovakia, use -Duser.language=sk -Duser.country=SK.</li>
+</ol>
+
+<h2>Technical notes</h2>
+<ul>
+	<li>MorenaCapabilities library stores necessary information to the properties files located in the .morena directory of the user's home
+	directory.</li>
+	<li>It is possible to turn on a debug mode by setting -Dmorena.capabilities.debug=true system property.</li>
+</ul>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<p>Please, notice, that this library is in beta version and can be changed. We appreciate your experiences with using this library.</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+Version 0.5 15.9.2009
+
+- Library name set to "Morena Capabilities", located in the SK.gnome.capabilities package.
+- Library moved into the standard Morena distribution package.
+- New features:
+-- New resizeable user interface dialog window.
+-- New image preview window.
+-- In Sane interface, the host name, port number and user name are remembered.
+-- System property -Dmorena.capabilities.debug intended to tun on/off a debug log information.
+
+Version 0.6 29.9.2009
+- SetFrame is not used by default yet.
+
+Version 0.7 4.1.2011
+- International support introduced.

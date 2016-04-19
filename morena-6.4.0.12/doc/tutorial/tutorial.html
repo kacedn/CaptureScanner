@@ -1,0 +1,575 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Morena 6 Tutorial</title>
+<style type="text/css">
+BODY
+{ color: white;
+  background-color: #376496;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#MAIN
+{ 
+  text-align: justify;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+PRE
+{ background-color: gray;
+  font-family: monospace;
+  padding: 10px;
+}
+
+H1
+{ font-size: 13pt;
+  text-align: right;
+}
+
+H2
+{ font-size: 12pt;
+  text-align: right;
+  margin-top: 30px;
+}
+
+H3
+{ font-size: 10pt;
+  text-align: left;
+  margin-top: 20px;
+}
+
+P, A, UL, LI, PRE
+{ font-size: 10pt;
+}
+
+LI
+{ margin-bottom: 10px;
+}
+
+A
+{ color: yellow;
+}
+
+P.SMALL
+{ font-size: 10pt;
+  font-style: italic;
+}
+
+</style>
+</head>
+<body>
+<div id="MAIN">
+
+<img style="margin-right: 30px;" src="morena6.gif" align="left" />
+<h1>Morena 6 - image acquision framework tutorial</h1>
+<p class="SMALL">Morena is a Slavic goddess of death and winter. She is old and ugly. She has no wings and she was
+never seen in front of big "6". And this is just the beginning.</p>
+
+<h2>Some commonly used terms</h2>
+
+<p><a href="http://www.twain.org">TWAIN</a> (Technology Without An Interesting Name), an image capture API for
+Microsoft Windows and Apple Macintosh operating systems. Introduced in 1992, and is currently ratified at version 1.9
+(as of January 2000). Standard is maintained by TWAIN Working Group, a not-profit organization which represents the
+imaging industry.</p>
+
+<p><a href="http://www.sane-project.org">SANE</a> (Scanner Access Now Easy), an image capture API for Unix and
+Unix-like operating systems, but also available for OS/2 and Microsoft Windows. Introduced in 1996, currently in version
+1.0. SANE is open source project and is available under the GNU General Public License.</p>
+
+<h2>History</h2>
+
+<p>Morena 6 is a direct successor of product called JavaTwain. The original product, a side effect of our forms
+recognition software, was made public in a version 2.0 in late 1999. It was a single-class java wrapper for TWAIN API
+with no error handling and just a couple of get and set methods for the most common image acquisition device
+capabilities. But it already introduced the philosophy of this product line - simple java native interface, which hides
+a complexity and inconsistency of an image acquisition API.</p>
+
+<p>In 2002 JavaTwain 5 was introduced. With Apple MacOS and MacOS X port and TwainManager/TwainSource design it was
+the base for our current products. First one is ObjectiveTwain, image acquisition framework for ObjectiveC and Cocoa
+based applications for MacOS X and JavaTwain generalization for TWAIN, SANE and in future hopefully ISIS or WIA image
+acquisition APIs called Morena.</p>
+
+<p>The last release, Morena 6, features even deeper API independence, simpler installation, and last but not least
+this tutorial.</p>
+
+<h2>Technical requirements</h2>
+
+<p>Morena is just a Java wrapper for TWAIN or SANE image capture API. It implies, that you need at least three
+components for its use:</p>
+
+<ul>
+  <li>Java2 VM (version 1.3 or better),</li>
+
+  <li>TWAIN DSM (Data Source Manager) for local Windows or MacOS X machine, or SANE network daemon listening on
+  local or remote unix machine,</li>
+
+  <li>and some image acquisition hardware with driver properly installed and configured.</li>
+</ul>
+
+<p>Morena runs on any machine and/or operating system with these three components available. In rare situations
+Morena can crash Java VM. It probably means, that you have TWAIN driver installed, which is not able to run within heap
+or stack constraints of VM. You can't do much about it, except to install newer version of the driver.</p>
+
+<p>You can try Morena even if you have no actual hardware. There is a kind of "virtual scanner" for both TWAIN and
+SANE. TWAIN "sample source" is a part of TWAIN Developer Toolkit and you can download it <a
+  href="http://www.twain.org/download.htm">here</a>. SANE "pnm", or at least "test" driver is usually part of SANE
+installation.</p>
+
+<h2>Installation</h2>
+
+<p>Since version 6.3, there is no installation necessary. Just put morena.jar, morena_windows.jar (or
+morena_osx.jar) and morena_license.jar to your CLASSPATH. Native components are stored in morena_windows.jar (or
+morena_osx.jar) and are installed automatically to .morena folder in your home directory if needed.</p>
+
+<h2>Lesson 1 - "Hello world!"</h2>
+
+<p>In our first example we'll just acquire an image and throw it away. There are two basic steps we need to do:</p>
+<ul>
+  <li>to select a source (scanner, camera etc.),</li>
+  <li>to acquire an image (scan document, transfer image from camera, etc.)</li>
+</ul>
+
+<p>The code doing these two steps can look like this:</p>
+
+<pre>
+import SK.gnome.morena.*;
+
+public class HelloWorld
+{ public static void main(String[] args) throws MorenaException
+  { MorenaSource source=Morena.selectSource(null);
+    System.err.println("Selected source is "+source);
+    if (source!=null)
+    { MorenaImage image=new MorenaImage(source);
+      System.err.println("Size of acquired image is "
+      	+image.getWidth()+" x "
+      	+image.getHeight()+" x "
+      	+image.getPixelSize());
+    }
+    Morena.close();
+  }
+}
+</pre>
+
+<p>The first step is implemented by the following line:</p>
+
+<pre>
+    MorenaSource source=Morena.selectSource(null);
+</pre>
+
+<p><a href="../api/SK/gnome/morena/Morena.html#selectSource(java.awt.Component)"> Morena.selectSource()</a> method
+displays a sequence of dialog boxes asking for selecting between TWAIN and SANE API, for entering SANE daemon host name
+and for selecting one of installed devices. The return value is MorenaSource instance representing particular device.
+Its most important feature is, that it implements <a
+  href="http://java.sun.com/j2se/1.5.0/docs/api/java/awt/image/ImageProducer.html"> ImageProducer</a> interface, the
+java native API for images.</p>
+
+<p>If you want to work with TWAIN or SANE API only, you can use <a
+  href="../api/SK/gnome/twain/TwainManager.html#selectSource(java.awt.Component,
+ SK.gnome.twain.TwainSource)">
+TwainManager.selectSource()</a> or <a href="../api/SK/gnome/sane/SaneConnection.html#selectSource(java.awt.Component)">
+SaneConnection.selectSource()</a> instead of Morena.selectSource() to skip first dialog box.</p>
+<p>The second step is implemented by the following line:</p>
+
+<pre>
+    MorenaImage image=new MorenaImage(source);
+</pre>
+
+<p><a href="../api/SK/gnome/morena/MorenaImage.html">MorenaImage</a> class serves as a memory buffer for acquired
+image. It is both <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/awt/image/ImageProducer.html"> ImageConsumer</a>
+and <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/awt/image/ImageProducer.html"> ImageProducer</a> and can be
+quite useful if you want to avoid repetitive scanning each time Morena source is asked to produce an image as a simple
+replacement for <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/awt/image/BufferedImage.html"> BufferedImage</a>.</p>
+
+<p>Compile the code, run it with both morena.jar, morena_windows.jar (or morena_osx.jar) and morena_license.jar in
+the classpath. After selecting an image source the code should produce an output like this:</p>
+
+<pre>
+Morena - Image Acquisition Framework version 6.3.0.0.
+Copyright (c) Gnome s.r.o. 1999-2005. All rights reserved.
+Licensed to "Anonymous evaluator".
+
+The license will expire on 1/2/2006!
+
+This license is valid for evaluation purposes only.
+
+Selected source is TWAIN_32 Sample Source
+Size of acquired image is 850 x 1100 x 8
+</pre>
+
+<p>If it really does, you can continue with more sophisticated examples, otherwise go to chapter <a
+  href="#troubleshooting">troubleshooting</a> first to find out what's wrong.</p>
+
+<h2>Lesson 2 - setting some parameters</h2>
+
+<p>We used default settings for all scanning parameters in the previous example. It may be enough in a case of using
+TWAIN driver native user interface, but if you want to keep the interface hidden for some reason or you are using SANE
+driver, you may need to set specific resolution, color model or frame. There are hundreds of parameters you can tweak
+for real device, unfortunately not all are supported by all devices and there is a different approach for TWAIN and for
+SANE devices.</p>
+
+<p>Let's change the code of previous example in the following way:</p>
+
+<pre>
+import SK.gnome.morena.*;
+
+public class HelloWorld
+{ public static void main(String[] args) throws MorenaException
+  { MorenaSource source=Morena.selectSource(null);
+    System.err.println("Selected source is "+source);
+    if (source!=null)
+    { source.setVisible(false);  // Lesson 2
+      source.setColorMode();     // Lesson 2
+      source.setResolution(300); // Lesson 2
+      System.err.println("Image resolution is "
+      	   +source.getResolution()); // Lesson 2
+      MorenaImage image=new MorenaImage(source);
+      System.err.println("Size of acquired image is "
+           +image.getWidth()+" x "
+           +image.getHeight()+" x "
+           +image.getPixelSize());
+    }
+    Morena.close();
+  }
+}
+</pre>
+
+<p>In the ideal case the driver should acquire an image without any user intervention, in full color and in 300 DPI
+resolution, because of the following lines:</p>
+
+<pre>
+      source.setVisible(false);  // Lesson 2
+      source.setColorMode();     // Lesson 2
+      source.setResolution(300); // Lesson 2
+</pre>
+
+<p>But the results may vary depending on your implementation. If the result is different, it means that your TWAIN
+driver does not honour these settings. With default error handling settings are ignored, if you are trying to set
+unsupported capability or unsupported value.</p>
+
+<p>In the special case of TWAIN sample source the driver will acquire image and you will get the output like this:</p>
+
+<pre>
+Selected source is TWAIN_32 Sample Source
+Image resolution is 100.0
+Size of acquired image is 850 x 1100 x 24
+</pre>
+
+<p>As you can see, request for full color mode is accepted (24 bits per pixel), but request for 300 DPI is ignored.
+In the next lesson we'll see how to handle such situation using a standard java exception mechanism.</p>
+
+<h2>Lesson 3 - unmask exceptions</h2>
+
+<p>In general, there are two kinds of common exceptions you may want ignore or catch. First one is the situation,
+when you are trying to set or get the capability, which is not supported at all by your driver and another one is the
+situation, when you are trying to set value out of the range of supported values for particular capability, particular
+device or context.</p>
+
+<p>The behaviour of Morena in such situations is controlled by <a
+  href="../api/SK/gnome/morena/MorenaSource.html#maskUnsupportedCapabilityException(boolean)">
+maskUnsupportedCapabilityException()</a> and <a
+  href="../api/SK/gnome/morena/MorenaSource.html#maskBadValueException(boolean)"> maskBadValueException()</a> methods.
+In the default mode the exceptions are ignored. To throw MorenaException, you can use methods similar to those in the
+code example below:</p>
+
+<pre>
+import SK.gnome.morena.*;
+
+public class HelloWorld
+{ public static void main(String[] args) throws MorenaException
+  { MorenaSource source=Morena.selectSource(null);
+    System.err.println("Selected source is "+source);
+    if (source!=null)
+    { source.maskUnsupportedCapabilityException(false); // Lesson 3
+      source.maskBadValueException(false);              // Lesson 3
+      source.setVisible(false);
+      source.setColorMode();
+      source.setResolution(300);
+      System.err.println("Image resolution is "
+      	   +source.getResolution());
+      MorenaImage image=new MorenaImage(source);
+      System.err.println("Size of acquired image is "
+           +image.getWidth()+" x "
+           +image.getHeight()+" x "
+           +image.getPixelSize());
+    }
+    Morena.close();
+  }
+}
+</pre>
+
+<p>Let's try to run the program again with TWAIN Sample source:</p>
+
+<pre>
+Selected source is TWAIN_32 Sample Source
+Exception in thread "main" SK.gnome.twain.TwainException: Failed to
+		set capability ICAP_XRESOLUTION (FAILURE, BADVALUE)
+        at SK.gnome.twain.TwainSource.setXResolution(Native Method)
+        at SK.gnome.twain.TwainSource.setResolution(TwainSource.java:120)
+        at HelloWorld.main(HelloWorld.java:15)
+</pre>
+
+<p>Source does understand resolution capability, but does not accept 300 DPI as capability value.</p>
+
+<h2>Lesson 4 - TWAIN specific features - specific capabilities, ADF support</h2>
+
+<p>Even if our philosophy is to hide the complexity and the differences between TWAIN and SANE as much as possible,
+it is not always possible - the intersection of TWAIN and SANE API is not big enough to make one unified interface.</p>
+
+<p>In the case of TWAIN, the driver is supposed to have its own user interface for setting the available
+capabilities and in many cases it is not possible to acquire an image without user intervention. There is a fixed set of
+capabilities listed by TWAIN specification that you can set or read. Therefore <a
+  href="../api/SK/gnome/twain/TwainSource.html"> TwainSource</a> has hundreds of different getXxx(), setXxx(),
+getDefaultXxx() and getSupportedXxx() methods for each capability listed in specification. Some of them will work for
+your particular device and some of them not. It is recommended to test all capability settings used in your code on
+specific target device.</p>
+
+<p>As an useful tool you can also use code generated along with TwainSource toTwainAutomatedTest.java in example
+folder.</p>
+
+<p>The following example shows how to use the ADF (Automatic Document Feeder), the specific TWAIN capability:</p>
+
+<pre>
+import SK.gnome.morena.*;
+import SK.gnome.twain.*;
+
+public class ADFTwainExample
+{ public static void main(String[] args) throws MorenaException
+  { TwainSource source=TwainManager.selectSource(null, null);
+    System.err.println("Selected source is "+source);
+    if (source!=null)
+    { source.setFeederEnabled(true);
+      source.setAutoFeed(true);
+      source.setTransferCount(5);
+      int count=1;
+      do
+      { MorenaImage image=new MorenaImage(source);
+        System.err.println("Size of acquired image "+(count++)+" is "
+             +image.getWidth()+" x "
+             +image.getHeight()+" x "
+             +image.getPixelSize());
+      }
+      while (source.hasMoreImages());
+    }
+    TwainManager.close();
+  }
+}
+</pre>
+
+<p>First, note that TwainManager is used to obtain an instance of TwainSource to make sure, that we are working with
+TWAIN, not SANE source. The following lines:</p>
+
+<pre>
+      source.setFeederEnabled(true);
+      source.setAutoFeed(true);
+      source.setTransferCount(5);
+</pre>
+
+<p>instruct driver to use ADF as input, to eject one page and feed the next page after the frame of the first page
+is acquired automaticaly and to scan no more than 5 pages (you can set this parameter to -1 if you want to scan
+unlimited number of pages).</p>
+
+<p>The core is the loop repeating image production until <a
+  href="../api/SK/gnome/twain/TwainSource.html#hasMoreImages()"> source.hasMoreImages()</a> returns false:</p>
+
+<pre>
+      do
+      { MorenaImage image=new MorenaImage(source);
+      	...
+      }
+      while (source.hasMoreImages());
+</pre>
+
+<p>An Output of running this code with TWAIN Samples Source is shown bellow:</p>
+
+<pre>
+Selected source is TWAIN_32 Sample Source
+Size of acquired image 1 is 850 x 1100 x 8
+Size of acquired image 2 is 850 x 1100 x 8
+Size of acquired image 3 is 850 x 1100 x 8
+Size of acquired image 4 is 850 x 1100 x 8
+Size of acquired image 5 is 850 x 1100 x 8
+</pre>
+<p>It is possible not to buffer the acquired image. See Sane's ADF example for <a href="#Sane_Adf_Example">How To</a>.</p>
+<p>To learn more about different TWAIN driver capabilities, compare Morena TWAIN API with <a
+  href="http://www.twain.org/docs/Spec1_9_197.pdf">TWAIN Specification</a>.</p>
+<h2>Lesson 5 - SANE specific features - option descriptors, ADF support</h2>
+
+<p>SANE driver has no user interface and client software is supposed to build its own according to the list of
+supported capabilities. This list can be different for each driver and is available to programmer by calling <a
+  href="../api/SK/gnome/sane/SaneSource.html#getOptionDescriptors()"> getOptionDescriptors()</a> method. Obtained result
+is an array of <a href="../api/SK/gnome/sane/SaneOptionDescriptor.html">SaneOptionDescriptor</a> instances, one for each
+driver capability (as you can see from the class hierarchy, MorenaOptionDescriptor is already defined and
+TwainOptionDescriptor can be expected in one of the future releases of Morena).</p>
+
+<p>The following code demonstrates what you can learn from information returned by SANE driver by
+getOptionDescriptors() method:</p>
+
+<pre>
+import SK.gnome.morena.*;
+import SK.gnome.sane.*;
+
+public class ListSaneOptionsExample
+{ public static void main(String[] args) throws Exception
+  { SaneSource source=SaneConnection.selectSource(null);
+    System.err.println("Selected source is "+source);
+    if (source!=null)
+    { SaneOptionDescriptor descriptors[]=source.getOptionDescriptors();
+      for (int i=0; i&lt;descriptors.length; i++)
+      { System.err.println();
+        System.err.println("Descriptor "+i
+            +" - \""+descriptors[i].title+"\"");
+        System.out.println("name=\""+descriptors[i].name
+            +"\", type="+descriptors[i].type
+            +", cap="+ descriptors[i].cap
+            +", size="+descriptors[i].size
+            +", unit="+descriptors[i].unit);
+      }
+    }
+  }
+}
+</pre>
+
+<p>A result obtained by running this code on SANE frontend tester driver looks like this:</p>
+
+<pre>
+Selected source is frontend-tester [test:0]
+
+Descriptor 0 - "Number of options"
+name="", type=1, cap=4, size=4, unit=0
+
+Descriptor 1 - "Scan Mode"
+name="", type=5, cap=0, size=0, unit=0
+
+Descriptor 2 - "Scan mode"
+name="mode", type=3, cap=5, size=6, unit=0
+
+Descriptor 3 - "Bit depth"
+name="depth", type=1, cap=5, size=4, unit=0
+
+Descriptor 4 - "Hand-scanner simulation"
+name="hand-scanner", type=0, cap=5, size=4, unit=0
+
+Descriptor 5 - "Three-pass simulation"
+name="three-pass", type=0, cap=37, size=4, unit=0
+
+Descriptor 6 - "Set the order of frames"
+name="three-pass-order", type=3, cap=37, size=4, unit=0
+
+Descriptor 7 - "Scan resolution"
+name="resolution", type=2, cap=5, size=4, unit=4
+
+Descriptor 8 - "Special Options"
+name="", type=5, cap=0, size=0, unit=0
+
+Descriptor 9 - "Select the test picture"
+name="test-picture", type=3, cap=5, size=14, unit=0
+
+Descriptor 10 - "Invert endianness"
+name="invert-endianess", type=0, cap=37, size=4, unit=0
+
+... and about 40 of another capabilities ...
+</pre>
+
+<p>For the meaning of attributes of option descriptor look to <a href="http://www.sane-project.org/html/doc011.html">SANE
+Standard</a> chapter "4.2.9 Option Descriptor Type".</p>
+
+
+<a name="Sane_Adf_Example"></a>
+<p>Sane backend reports the "out of paper" situation by returning SANE_STATUS_NO_DOCS status code. Some backends do
+it by default, some require to set a special sane option, so that they accept the fact that "application wants to use
+ADF". In that situation you need to examine the list of backend's options and find the appropriate adf option name. E.g.
+setOption("source", "ADF");</p>
+
+<p>The following example shows how to use the ADF (Automatic Document Feeder):</p>
+<pre>
+    Image image;
+    SaneConnection sc=null;
+
+    try
+    {
+      sc = SaneConnection.connect("localhost");
+      SaneSource source=sc.selectSource(null,null);
+      // Following type of calling is often required. 
+      // The option name is backend specific.
+      //source.setOption("source", "ADF");  
+      do
+      {
+        image=Toolkit.getDefaultToolkit().createImage(source);
+        MediaTracker tracker=new MediaTracker(this);
+        tracker.addImage(image, 0);
+        try
+        { tracker.waitForAll();
+        }
+        catch (InterruptedException e)
+        { e.printStackTrace();
+        }
+        tracker.removeImage(image);
+        System.out.println("Size of acquired image is " 
+            + image.getWidth(this) + " x " 
+            + image.getHeight(this) 
+            + ", sc.getResultCode()=" + sc.getResultCode());
+      } while (sc.getResultCode() != SaneConstants.SANE_STATUS_NO_DOCS);
+    }
+    catch (Exception e)
+    { e.printStackTrace();
+    }
+    finally
+    { if(null!=sc)
+      try
+      { sc.close();
+      }
+      catch (Exception e)
+      { e.printStackTrace();
+      }
+    }
+
+</pre>
+
+<h2>Lesson 6 - applications vs. applets</h2>
+
+<p>Since version 6.3, there is no substantial difference between application and applet, because you don't have to
+install Morena yourself. Nevertheless there is one issue you should not forget.</p>
+
+<p>Morena installer needs to create folder names .morena in your home directory upon first invocation of some
+classes (specifically TwainManager) and write some files into it. The easiest way to do it, is to digitally sign your
+applet.</p>
+
+<p>Remember to add all of morena.jar, morena_windows.jar, morena_osx.jar and morena_license.jar to the ARCHIVE
+attribute of APPLET tag to keep your page as multiplatform as possible.</p>
+
+<h2>Lesson 7 - real world application</h2>
+
+<p>As an example of real world application you can find MorenaStudio.java in the distribution package. It
+demonstrates some common tasks you need to accomplish with Morena -- acquiring image, displaying, saving and uploading
+it and also some techniques necessary to make your code reliable, like buffering of image, testing image status and
+avoiding thread conflicts.</p>
+
+<p>Make sure you understand the following tricky issues before you start writing your first application.</p>
+<ul>
+  <li>Morena is not thread safe, because underlying technology (TWAIN and SANE) is not thread safe. To avoid fatal
+  errors in multithreaded environment, make sure that you are using Morena in synchronised code only and every
+  invocation of any Morena class or method is followed by Morena.close() call at the end. See AcquireImageAction.run()
+  in MorenaStudio.java for a working example of this approach.</li>
+
+  <li>Each invocation of startProduction() on Morena sources ImageProducer interface means new acquisition on your
+  imaging device. You have to cache a image if you want to use it for repetitive drawing, saving to file or other
+  manipulation. Either MorenaImage or BufferedImage can be used. See AcquireImageAction.run() or SaveImageAction.run()
+  methods in MorenaStudio.java.</li>
+
+  <li>Manipulation with large images needs a lot of memory so make sure that you are not producing memory leaks by
+  keeping unnecessary references to cached images.</li>
+
+</ul>
+
+<a name="troubleshooting"></a>
+<h2>Troubleshooting and FAQ</h2>
+
+<p>You can find the answers for the common questions, tasks and problems at our 
+<a href="http://www.gnome.sk/Twain/jtp_support.html">Morena's technical support web page</a>.
+</p>
+</div>
+</body>
+</html>

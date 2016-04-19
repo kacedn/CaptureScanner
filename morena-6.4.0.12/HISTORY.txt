@@ -1,0 +1,259 @@
+Version 4.1 4.4.2001
+1) Bug fix: exception cleaning before next scan production
+2) Bug fix: JavaTwain does not use setProperties method in ImageProducer calling. That's why it used to call setProperties(null). We stopped it. For now, it does not call any setProperties method.
+3) In the example4.java you have two possibility how to receive a scanned data.
+
+Version 4.2 13.4.2001
+When there was some problem during image acquiring (e.g. paper jam) and Twain driver User Interface window was hide, application hanged. Twain driver remained in memory. It is fixed.
+
+Version 4.3 20.11.2001
+1) New remote scanning examples included in the full version release. (client/server design, applet design).
+2) We received information, that in some environments Twain dialog windows popped up behind the other windows and are not visible. There is Example5.java in the examples directory, which demonstrates how to solve the situation.
+3) Bug fix: setFrame() has real number arguments. It sent to the Twain driver integer values only. It is fixed, now.
+4) Bug fix: If selectSource() threw an exception, it did not close the source. It close it correctly, now.
+
+Version 5.0 beta1 23.3.2002
+1) Native code replaced by "Multiplatform Twain Support".
+2) TwainEx replaced by single TwainManager and multiple TwainSource instances.
+3) SET/GET methods for all "onevalue" capabilities added to TwainSource and Twain.
+4) "setCurrentUnit" method replaced with the "setUnit" method.
+5) New exception management
+6) MacOS and pre-release MacOS X version.
+
+Version 5.0 beta2 23.4.2002
+1) "Multiplatform Twain Support" has COM support in javatwain.dll.
+
+Version 5.0 14.5.2002
+
+Version 5.0.1 28.5.2002
+1) Multithreading bug fixed.
+2) Version checking added.
+3) Conditional shutdown hook added.
+
+Version 5.0.1.4 1.6.2002
+1) New license checking added.
+2) Remote scanning support added.
+
+Version 5.0.1.5 11.6.2002
+1) Multiple JNI code bug initialization fixed.
+2) setBehaviorMask() added.
+
+Version 5.0.1.6 14.6.2002
+1) Unsupported capability getter bug fixed.
+
+Version 5.0.1.7 17.6.2002
+1) Thread checking added.
+
+Version 5.0.1.8 25.6.2002
+1) TwainImage accepts any ImageProducer in constructor.
+2) Data overrun in license string fixed.
+3) Remote solution examples added.
+4) Saving to TIFF format example added.
+
+Version 5.0.1.9-11 16.7.2002
+1) Build system changed to ANT.
+
+Version 5.0.1.12 22.7.2002
+1) "TwainManager non-virtual destructor" problem fixed.
+2) "No twain_32.dll" problem fixed.
+
+Version 5.0.2.0 1.8.2002
+1) TwainSource.endOfJob() method added.
+2) "Missing link" for clearPage(), feedPage() and rewindPage() fixed.
+
+Version 5.0.2.1 7.8.2002
+1) Trace output changed to better support remote examples.
+
+Version 5.0.2.2 4.10.2002
+1) Null container handle error fixed in getXXXCapability() methods.
+
+Version 5.1.0.0 1.11.2002
+1) New API generator used.
+2) getSupported...() and getDefault...() signatures added for boolean, int and double capabilities with TW_ENUMERATION container.
+3) TwainLoader changed to use TwainManager/TwainSource instead of Twain.
+4) New content of examples folder.
+5) New content of remote folder.
+6) New content of tutorial folder.
+7) New build.xml (same file for full and public source, for windows and MacOS X).
+
+Version 5.1.1.0 2.3.2003
+1) Removed QuickTime dependency in MAC OS code (to be 1.4.1 compatible).
+2) Experimental code for barcode recognition.
+3) PURCHASE_DATE checking added.
+
+Version 5.1.1.1 19.3.2003
+1) imageDone() status code fixed.
+2) TWON_RANGE result type added to getIntCapability() and getDoubleCapability() methods.
+
+Version 5.1.1.2 22.4.2003
+1) License validation under OS X/Java 1.4.1 fixed.
+2) ArrayOutOfBounds in setPixel call under OS X fixed.
+3) getIntCapability() return value masked for proper number of bits.
+
+Version 5.1.1.3. 6.5.2003
+1) TwainManager.getIdentity() and TwainSource.getIdentity() added.
+
+Version 5.1.1.4 16.5.2003
+1) Problem with TwainException inside TwainSource.acquireImage fixed.
+
+Version 5.1.1.5 17.6.2003
+1) Invalid TW_RANGE->StepSize value handled.
+
+Version 5.1.1.6 18.6.2003
+1) TWRC_CANCEL and TWRC_FAILURE with hidden UI closes DS.
+2) Automatic binary distribution upload added.
+3) Problem with TwainException inside TwainSource.acquireImage in MacOS X fixed.
+
+Version 5.1.1.7 26.7.2003
+1) NativeTest added to full sources.
+
+Version 5.1.1.8 27.7.2003
+1) mac strings issues fixed.
+
+Version 6.0.0.0 24.8.2003
+1) SK.gnome.morena package added.
+2) examples/AutomatedTest.java added
+3) symbolic names in debug log.
+4) zero length arrays bug in getInt/DoubleCapability() fixed.
+5) NULL strings bug in get/set capabilities fixed.
+
+Version 6.0.0.1 7.9.2003
+1) itoa bug fixed in OS X build.
+
+Version 6.0.1.0 8.10.2003
+1) filesystem API added for win32.
+
+Version 6.0.1.1 22.12.2003
+1) transferResultCode added to TwainBase class.
+2) ExampleConsumer.java and ExampleShowAdvanced.java added.
+3) Invalid rc and cc source for TwainProxy communication fixed.
+
+Version 6.0.2.0 9.1.2004
+1) setBuffer(int []) and setBuffer(byte []) methods added to TwainSource.
+2) SpeedTest.java added.
+3) TwainProxy crash on invalid capability.ConType fixed.
+
+Version 6.1.0.0 26.5.2004
+1) File transfer mode added to Windows version.
+
+Version 6.1.0.1 13.5.2004
+1) File transfer mode added to MacOS version.
+
+Version 6.1.0.2 26.8.2004
+1) Exception handling fixed in file transfer mode.
+
+Version 6.1.0.3 6.9.2004
+1) Use of javatwain_debug.dll is controlled by twain.debug=true property.
+2) javatwain_debug.dll writes log to both stderr and c:\morena.log on windows and /tmp/morena.log on MacOS X.
+3) Product identification can be set by twain.product property.
+
+Version 6.2.0.0 12.10.2004
+1) Experimental SANE support added (package SK.gnome.sane and examples/Sane*)
+2) "JavaTwain" is globally changed to "Morena" (valid javatwain_license.jar can be used).
+3) Examples are renamed from Example... to TwainExample... or SaneExample...
+4) Name of the debug system property -Dtwain.debug changed to -Dmorena.debug
+
+Version 6.2.0.1 20.8.2005
+1) New exceptions in file transfer mode added.
+2) TWON_ONEVALUE bug in getDoubleCapability() and getIntCapability() fixed.
+3) SANE image size problem fixed.
+
+Version 6.3.0.0	26.8.2005
+1) Native components are installed automatically from resources folder in morena.jar into .morena folder of current user. Different versions of Morena can be used on the same machine.
+2) MorenaImage added, TwainImage deprecated.
+3) New set of examples and new tutorial.
+4) New "select source" dialogs added for Morena, TWAIN and SANE.
+5) New trial, binary and source code license agreement.
+
+Version 6.3.1.0	23.12.2005
+1) TW_IMAGEINFO getActual...() methods added to TwainSource.
+
+Version 6.3.1.1	23.3.2006
+1) If the installation into .morena folder of current user fails, a second attempt of the installation is executed into .morena folder of temp directory.
+
+Version 6.3.1.2 13.7.2006
+1) Problem with crashing JVM when calling methods on invalid TwainSource instances fixed.
+
+Version 6.3.1.3 8.8.2006
+1) Fixed problem with TwainManager.close() called from shutdown hook.
+
+Version 6.3.2.0 30.9.2006
+1) Intel platform support for MacOS X
+
+Version 6.3.2.1 21.10.2006
+1) Sane getOption bug fixed.
+
+Version 6.3.2.2 8.1.2007
+1) Any TwainManager method throws an exception in case there is no DS installed.
+
+Version 6.3.2.3 13.2.2007
+1) Shutdown hook crash bug fixed.
+2) Multiple DS crash bug fixed for OS X.
+
+Version 6.3.2.4 26.3.2007
+1) MS Windows native library compiled with Microsoft compiler. (In order to workaround Java 1.6. jni bug.)
+2) Default value of the morena.shutdown.hook system property is false.
+
+Version 6.3.2.5 3.4.2007
+1) getXXXCapability() methods accept other value types than specified by twty argument, if conversion is possible.
+
+Version 6.3.2.6 24.7.2007
+1) Symbolic values for ICAP_DUPLEX added to TwainConstants.
+
+Version 6.3.2.7 12.8.2007
+1) DOU* and INT* message parameter types fixed for Intel MacOS X.
+2) getDoubleCapability() for enumeration type fixed.
+3) TW_UINT32/TW_FIX32 conversion fixed.
+
+Version 6.3.2.8 21.9.2007
+1) HPLIP backend string option bug fixed for SANE.
+
+Version 6.3.2.9 10.2.2008
+1) SaneConnection.getResultCode() bug fixed for SANE.
+
+Version 6.4.0.0 26.7.2008
+1) generic get/set...Capability methods added to TwainSource.
+
+Version 6.4.0.1 28.1.2009
+1) Bug fix: setFrame() threw an exception even if maskUnsupportedCapabilityException(true) or maskBadValueException(true) was set. It does not throw it, now.
+
+Version 6.4.0.2 25.4.2009
+1) Forced AWT initialization for Java 1.6.10.
+
+Version 6.4.0.3 17.6.2009
+1) Black/white color mode support added for SANE.
+
+Version 6.4.0.4 24.9.2009
+1) maskUnsupportedCapabilityException, maskBadValueException methods now return the previous value.
+2) Beta version 0.5 of the new MorenaCapabilities library.
+
+Version 6.4.0.5 9.1.2010
+1) Fixed build.xml.
+2) Fixed IBM JRE 1.5 AWT issue.
+
+Version 6.4.0.6 24.4.2010
+1) 64 bit support for Windows
+
+Version 6.4.0.7 30.7.2011
+1) xxxPathCodes replaced by xxxPatchCodes
+2) fixed utf-8 bug in license files
+3) TwainProxy is universal application to support OSX Lion
+
+Version 6.4.0.8 9.9.2011
+3) Intel 32bit only version working with OSX Lion
+
+Version 6.4.0.9 6.12.2011
+1) Explicit close() added to SANE connections
+
+Version 6.4.0.10 20.1.2012
+1) new getFrame/setFrame methods (Windows only)
+
+Version 6.4.0.11 3.3.2012
+1) JNI extraction to TEMP directory fixed
+
+Version 6.4.0.12 22.3.2012
+1) Italian localization
+2) TwainSource.setStringCapability(...) bug fixed
+
+Version 6.4.0.13 5.3.2012
+1) USE_ICAP_FRAMES behavior mask added

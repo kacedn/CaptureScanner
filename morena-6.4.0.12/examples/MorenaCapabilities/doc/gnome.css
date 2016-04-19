@@ -1,0 +1,42 @@
+BODY
+{ font-family: Arial, Helvetica, Sans-Serif; 
+  text-align: left; 
+  margin-left: 10;
+  margin-top: 10;
+  margin-right:10;
+  margin-bottom: 10;
+  font-size: 12pt;
+}
+
+PRE
+{
+  padding: 10px;
+}
+
+H1
+{ font-size: 16pt;
+	text-align: center;
+}
+
+H2
+{ font-size: 14pt;
+  margin-top: 15px;
+}
+H3
+{ font-size: 12pt;
+	margin-top: 15px;
+}
+LI
+{ margin-bottom: 5px;
+}
+DT
+{ 
+	font-style: italic;
+}
+ul
+{
+	list-style-type: none;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
