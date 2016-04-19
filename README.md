@@ -1,5 +1,5 @@
 # CaptureScanner
-Test morena framework
+Framework test => Morena - Image Acquisition Framework version 6.4.0.12
 
 ## DEFINITION
 ## Twain
@@ -16,8 +16,17 @@ SANE (Scanner Access Now Easy), an image capture API for Unix and Unix-like oper
 
 # LINK
 
+## Protocols
  * Twain => http://www.twain.org/
+ * Sane => www.sane-project.org
+ * Wia => https://msdn.microsoft.com/en-us/library/windows/desktop/ms630368(v=vs.85).aspx
 
- * Morena Framework => http://www.gnome.sk/Twain/jtp.html
-
+## Framework Morena 6
+ * Framework Morena 6 => http://www.gnome.sk/Twain/jtp.html
+ * http://www.gnome.eu/Twain/doc/api/index.html
  * Tutorial => http://www.gnome.eu/Twain/doc/tutorial/tutorial.html
+
+## Framework Morena 7
+ * Framework Morena 7 => http://www.gnome.sk/Morena/morena.html
+ * http://www.gnome.eu/Morena/doc/api/index.html
+ * Tutorial => http://www.gnome.eu/Morena/doc/tutorial7.html

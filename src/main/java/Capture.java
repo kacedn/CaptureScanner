@@ -11,11 +11,11 @@ import SK.gnome.twain.TwainSource;
  */
 public class Capture {
     public static void main(String[] args) throws MorenaException{
-        System.out.println("Start capture!!");
+        System.out.println("Capture started!!");
 
 // Selection de la source de capture TWAIN ou sane thanks to Morena framework
 //        MorenaSource source=Morena.selectSource(null); // show dialog Box with two choice Twain or Sane
-//        SaneConnection.selectSource(null);
+//        TwainManager.selectSource(null); // SaneConnection.selectSource(null);
         MorenaSource source=TwainManager.selectSource(null);
 
         System.err.println("Selected source is "+source);

@@ -1,0 +1,1430 @@
+C:\Users\nka\.morena\twain64_604000c.dll found ...
+SK.gnome.twain.TwainManager$CloseHook registered ...
+Loading license for SK.gnome.twain.TwainManager class loader ...
+License loaded ...
+
+Morena - Image Acquisition Framework version 6.4.0.12.
+Copyright (c) Gnome s.r.o. 1999-2011. All rights reserved.
+Licensed to "Kaced Nabil <nabil.kaced@itesoft.com>".
+
+The license will expire on 19/5/2016!
+
+This license is valid for evaluation purposes only.
+
+   -> TwainManagerImpl::TwainManagerImpl("Gnome s.r.o.", "Twain", "Morena", 6, 4)
+      state: PRESESSION -> DSM_LOADED
+      [CONTROL, PARENT, OPENDSM] -> [SUCCESS, SUCCESS]
+      state: DSM_LOADED -> DSM_OPEN
+      [CONTROL, IDENTITY, GETFIRST] -> [SUCCESS, SUCCESS]
+      -> TwainSourceImpl::TwainSourceImpl()
+         state: -> DSM_OPEN
+         fileAvailable: -> FALSE
+      <-
+      [CONTROL, IDENTITY, GETNEXT] -> [ENDOFLIST, SUCCESS]
+   <-
+   -> TwainManagerImpl::listSources()
+   <- "TWAIN2 FreeImage Software Scanner"[1]
+Testing capabilities for 'TWAIN2 FreeImage Software Scanner' ...
+
+   -> TwainSourceImpl::maskUnsupportedCapabilityException(0)
+   <-
+   -> TwainSourceImpl::maskBadValueException(0)
+   <-
+   -> TwainSourceImpl::getIntCapability("ACAP_AUDIOFILEFORMAT", 4609, 4)
+      -> TwainSourceImpl::open() // "TWAIN2 FreeImage Software Scanner"
+         [CONTROL, IDENTITY, OPENDS] -> [SUCCESS, SUCCESS]
+         state: DSM_OPEN -> DS_OPEN
+      <-
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ACAP_AUDIOFILEFORMAT (FAILURE, CAPUNSUPPORTED)
+    getAudioFileFormat()->Failed
+   -> TwainSourceImpl::getIntCapability("ACAP_AUDIOFILEFORMAT", 4609, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ACAP_AUDIOFILEFORMAT (FAILURE, CAPUNSUPPORTED)
+    getSupportedAudioFileFormat()->Failed
+   -> TwainSourceImpl::getIntCapability("ACAP_AUDIOFILEFORMAT", 4609, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ACAP_AUDIOFILEFORMAT (FAILURE, CAPUNSUPPORTED)
+    getDefaultAudioFileFormat()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ACAP_XFERMECH", 4610, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ACAP_XFERMECH (FAILURE, CAPUNSUPPORTED)
+    getAudioTransferMech()->Failed
+   -> TwainSourceImpl::getIntCapability("ACAP_XFERMECH", 4610, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ACAP_XFERMECH (FAILURE, CAPUNSUPPORTED)
+    getSupportedAudioTransferMech()->Failed
+   -> TwainSourceImpl::getIntCapability("ACAP_XFERMECH", 4610, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ACAP_XFERMECH (FAILURE, CAPUNSUPPORTED)
+    getDefaultAudioTransferMech()->Failed
+
+   -> TwainSourceImpl::getIntCapability("CAP_ALARMVOLUME", 4121, 2)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_ALARMVOLUME (FAILURE, CAPUNSUPPORTED)
+    getAlarmVolume()->Failed
+   -> TwainSourceImpl::getStringCapability("CAP_AUTHOR", 4096, 11)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_AUTHOR (FAILURE, CAPUNSUPPORTED)
+    getAuthor()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_AUTOFEED", 4103, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 1
+    getAutoFeed()->true
+   -> TwainSourceImpl::setIntCapability("CAP_AUTOFEED", 4103, 6, 1)
+      [CONTROL, CAPABILITY, SET] -> [FAILURE, CAPBADOPERATION]
+      -- Operation not supported by capability
+   <- exception: Failed to set capability CAP_AUTOFEED (FAILURE, CAPBADOPERATION)
+    setAutoFeed(true)->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_AUTOMATICCAPTURE", 4122, 2)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_AUTOMATICCAPTURE (FAILURE, CAPUNSUPPORTED)
+    getAutomaticCapture()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_AUTOSCAN", 4112, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_AUTOSCAN (FAILURE, CAPUNSUPPORTED)
+    getAutoScan()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_BATTERYMINUTES", 4146, 2)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_BATTERYMINUTES (FAILURE, CAPUNSUPPORTED)
+    getBatteryMinutes()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_BATTERYPERCENTAGE", 4147, 1)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_BATTERYPERCENTAGE (FAILURE, CAPUNSUPPORTED)
+    getBatteryPercentage()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_CAMERAPREVIEWUI", 4129, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_CAMERAPREVIEWUI (FAILURE, CAPUNSUPPORTED)
+    getCameraPreviewUI()->Failed
+   -> TwainSourceImpl::getStringCapability("CAP_CAPTION", 4097, 12)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_CAPTION (FAILURE, CAPUNSUPPORTED)
+    getCaption()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_CLEARBUFFERS", 4125, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_CLEARBUFFERS (FAILURE, CAPUNSUPPORTED)
+    getClearBuffers()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_CUSTOMDSDATA", 4117, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_CUSTOMDSDATA (FAILURE, CAPUNSUPPORTED)
+    getCustomDSData()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_DEVICEONLINE", 4111, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 1
+    getDeviceOnLine()->true
+   -> TwainSourceImpl::getStringCapability("CAP_DEVICETIMEDATE", 4127, 9)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_DEVICETIMEDATE (FAILURE, CAPUNSUPPORTED)
+    getDeviceTimeDate()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_DUPLEX", 4114, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_DUPLEX (FAILURE, CAPUNSUPPORTED)
+    getDuplex()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_DUPLEXENABLED", 4115, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_DUPLEXENABLED (FAILURE, CAPUNSUPPORTED)
+    getDuplexEnabled()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_ENABLEDSUIONLY", 4116, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_ENABLEDSUIONLY (FAILURE, CAPUNSUPPORTED)
+    getEnableDSUIOnly()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_ENDORSER", 4118, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_ENDORSER (FAILURE, CAPUNSUPPORTED)
+    getEndorser()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_FEEDERALIGNMENT", 4141, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_FEEDERALIGNMENT (FAILURE, CAPUNSUPPORTED)
+    getFeederAlignment()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_FEEDERENABLED", 4098, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 1
+    getFeederEnabled()->true
+   -> TwainSourceImpl::setIntCapability("CAP_FEEDERENABLED", 4098, 6, 1)
+      [CONTROL, CAPABILITY, SET] -> [FAILURE, CAPBADOPERATION]
+      -- Operation not supported by capability
+   <- exception: Failed to set capability CAP_FEEDERENABLED (FAILURE, CAPBADOPERATION)
+    setFeederEnabled(true)->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_FEEDERLOADED", 4099, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 1
+    getFeederLoaded()->true
+   -> TwainSourceImpl::getIntCapability("CAP_FEEDERORDER", 4142, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_FEEDERORDER (FAILURE, CAPUNSUPPORTED)
+    getFeederOrder()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_INDICATORS", 4107, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_INDICATORS (FAILURE, CAPUNSUPPORTED)
+    getIndicators()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_JOBCONTROL", 4119, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_JOBCONTROL (FAILURE, CAPUNSUPPORTED)
+    getJobControl()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_JOBCONTROL", 4119, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_JOBCONTROL (FAILURE, CAPUNSUPPORTED)
+    getSupportedJobControl()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_JOBCONTROL", 4119, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_JOBCONTROL (FAILURE, CAPUNSUPPORTED)
+    getDefaultJobControl()->Failed
+
+   -> TwainSourceImpl::getIntCapability("CAP_LANGUAGE", 4140, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_LANGUAGE (FAILURE, CAPUNSUPPORTED)
+    getLanguage()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_LANGUAGE", 4140, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_LANGUAGE (FAILURE, CAPUNSUPPORTED)
+    getSupportedLanguage()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_LANGUAGE", 4140, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_LANGUAGE (FAILURE, CAPUNSUPPORTED)
+    getDefaultLanguage()->Failed
+
+   -> TwainSourceImpl::getIntCapability("CAP_MAXBATCHBUFFERS", 4126, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_MAXBATCHBUFFERS (FAILURE, CAPUNSUPPORTED)
+    getMaxBatchBuffers()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_MAXBATCHBUFFERS", 4126, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_MAXBATCHBUFFERS (FAILURE, CAPUNSUPPORTED)
+    getSupportedMaxBatchBuffers()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_MAXBATCHBUFFERS", 4126, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_MAXBATCHBUFFERS (FAILURE, CAPUNSUPPORTED)
+    getDefaultMaxBatchBuffers()->Failed
+
+   -> TwainSourceImpl::getIntCapability("CAP_PAPERDETECTABLE", 4109, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 1
+    getPaperDetectable()->true
+   -> TwainSourceImpl::getIntCapability("CAP_POWERSUPPLY", 4128, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_POWERSUPPLY (FAILURE, CAPUNSUPPORTED)
+    getPowerSupply()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_POWERSUPPLY", 4128, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_POWERSUPPLY (FAILURE, CAPUNSUPPORTED)
+    getSupportedPowerSupply()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_POWERSUPPLY", 4128, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_POWERSUPPLY (FAILURE, CAPUNSUPPORTED)
+    getDefaultPowerSupply()->Failed
+
+   -> TwainSourceImpl::getIntCapability("CAP_PRINTER", 4134, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTER (FAILURE, CAPUNSUPPORTED)
+    getPrinter()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_PRINTER", 4134, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTER (FAILURE, CAPUNSUPPORTED)
+    getSupportedPrinter()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_PRINTER", 4134, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTER (FAILURE, CAPUNSUPPORTED)
+    getDefaultPrinter()->Failed
+
+   -> TwainSourceImpl::getIntCapability("CAP_PRINTERENABLED", 4135, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTERENABLED (FAILURE, CAPUNSUPPORTED)
+    getPrinterEnabled()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_PRINTERINDEX", 4136, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTERINDEX (FAILURE, CAPUNSUPPORTED)
+    getPrinterIndex()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_PRINTERMODE", 4137, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTERMODE (FAILURE, CAPUNSUPPORTED)
+    getPrinterMode()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_PRINTERMODE", 4137, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTERMODE (FAILURE, CAPUNSUPPORTED)
+    getSupportedPrinterMode()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_PRINTERMODE", 4137, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTERMODE (FAILURE, CAPUNSUPPORTED)
+    getDefaultPrinterMode()->Failed
+
+   -> TwainSourceImpl::getStringCapability("CAP_PRINTERSTRING", 4138, 12)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTERSTRING (FAILURE, CAPUNSUPPORTED)
+    getPrinterString()->Failed
+   -> TwainSourceImpl::getStringCapability("CAP_PRINTERSUFFIX", 4139, 12)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_PRINTERSUFFIX (FAILURE, CAPUNSUPPORTED)
+    getPrinterSuffix()->Failed
+   -> TwainSourceImpl::getStringCapability("CAP_SERIALNUMBER", 4132, 12)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_SERIALNUMBER (FAILURE, CAPUNSUPPORTED)
+    getSerialNumber()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_TIMEBEFOREFIRSTCAPTURE", 4123, 2)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_TIMEBEFOREFIRSTCAPTURE (FAILURE, CAPUNSUPPORTED)
+    getTimeBeforeFirstCapture()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_TIMEBETWEENCAPTURES", 4124, 2)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_TIMEBETWEENCAPTURES (FAILURE, CAPUNSUPPORTED)
+    getTimeBetweenCaptures()->Failed
+   -> TwainSourceImpl::getStringCapability("CAP_TIMEDATE", 4100, 9)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_TIMEDATE (FAILURE, CAPUNSUPPORTED)
+    getTimeDate()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_THUMBNAILSENABLED", 4113, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability CAP_THUMBNAILSENABLED (FAILURE, CAPUNSUPPORTED)
+    getThumbnailsEnabled()->Failed
+   -> TwainSourceImpl::getIntCapability("CAP_UICONTROLLABLE", 4110, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 0
+    getUIControllable()->false
+   -> TwainSourceImpl::getIntCapability("CAP_XFERCOUNT", 1, 1)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- -1
+    getTransferCount()->-1
+   -> TwainSourceImpl::setIntCapability("CAP_XFERCOUNT", 1, 1, -1)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setTransferCount(-1)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_AUTOMATICBORDERDETECTION", 4432, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_AUTOMATICBORDERDETECTION (FAILURE, CAPUNSUPPORTED)
+    getAutomaticBorderDetection()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_AUTOBRIGHT", 4352, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_AUTOBRIGHT (FAILURE, CAPUNSUPPORTED)
+    getAutoBright()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_AUTOMATICDESKEW", 4433, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_AUTOMATICDESKEW (FAILURE, CAPUNSUPPORTED)
+    getAutomaticDeskew()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_AUTOMATICROTATE", 4434, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_AUTOMATICROTATE (FAILURE, CAPUNSUPPORTED)
+    getAutomaticRotate()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODEDETECTIONENABLED", 4407, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODEDETECTIONENABLED (FAILURE, CAPUNSUPPORTED)
+    getBarCodeDetectionEnabled()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODEMAXRETRIES", 4412, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODEMAXRETRIES (FAILURE, CAPUNSUPPORTED)
+    getBarCodeMaxRetries()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODEMAXRETRIES", 4412, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODEMAXRETRIES (FAILURE, CAPUNSUPPORTED)
+    getSupportedBarCodeMaxRetries()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODEMAXRETRIES", 4412, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODEMAXRETRIES (FAILURE, CAPUNSUPPORTED)
+    getDefaultBarCodeMaxRetries()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODEMAXSEARCHPRIORITIES", 4409, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODEMAXSEARCHPRIORITIES (FAILURE, CAPUNSUPPORTED)
+    getBarCodeMaxSearchPriorities()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODEMAXSEARCHPRIORITIES", 4409, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODEMAXSEARCHPRIORITIES (FAILURE, CAPUNSUPPORTED)
+    getSupportedBarCodeMaxSearchPriorities()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODEMAXSEARCHPRIORITIES", 4409, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODEMAXSEARCHPRIORITIES (FAILURE, CAPUNSUPPORTED)
+    getDefaultBarCodeMaxSearchPriorities()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODESEARCHMODE", 4411, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODESEARCHMODE (FAILURE, CAPUNSUPPORTED)
+    getBarCodeSearchMode()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODESEARCHMODE", 4411, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODESEARCHMODE (FAILURE, CAPUNSUPPORTED)
+    getSupportedBarCodeSearchMode()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODESEARCHMODE", 4411, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODESEARCHMODE (FAILURE, CAPUNSUPPORTED)
+    getDefaultBarCodeSearchMode()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODETIMEOUT", 4413, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODETIMEOUT (FAILURE, CAPUNSUPPORTED)
+    getBarCodeTimeout()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODETIMEOUT", 4413, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODETIMEOUT (FAILURE, CAPUNSUPPORTED)
+    getSupportedBarCodeTimeout()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BARCODETIMEOUT", 4413, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BARCODETIMEOUT (FAILURE, CAPUNSUPPORTED)
+    getDefaultBarCodeTimeout()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_BITDEPTH", 4395, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 24
+    getBitDepth()->24
+   -> TwainSourceImpl::setIntCapability("ICAP_BITDEPTH", 4395, 4, 24)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setBitDepth(24)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_BITDEPTH", 4395, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 24 values=[24] default=24
+    getSupportedBitDepth()->{24}
+   -> TwainSourceImpl::setIntCapability("ICAP_BITDEPTH", 4395, 4, 24)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setBitDepth(24)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_BITDEPTH", 4395, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 24 values=[24] default=24
+    getDefaultBitDepth()->24
+   -> TwainSourceImpl::setIntCapability("ICAP_BITDEPTH", 4395, 4, 24)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setBitDepth(24)->OK
+
+   -> TwainSourceImpl::getIntCapability("ICAP_BITDEPTHREDUCTION", 4396, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BITDEPTHREDUCTION (FAILURE, CAPUNSUPPORTED)
+    getBitDepthReduction()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BITDEPTHREDUCTION", 4396, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BITDEPTHREDUCTION (FAILURE, CAPUNSUPPORTED)
+    getSupportedBitDepthReduction()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BITDEPTHREDUCTION", 4396, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BITDEPTHREDUCTION (FAILURE, CAPUNSUPPORTED)
+    getDefaultBitDepthReduction()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_BITORDER", 4380, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 0
+    getBitOrder()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_BITORDER", 4380, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setBitOrder(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_BITORDER", 4380, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[0, 1] default=0
+    getSupportedBitOrder()->{0, 1}
+   -> TwainSourceImpl::setIntCapability("ICAP_BITORDER", 4380, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setBitOrder(0)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_BITORDER", 4380, 4, 1)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setBitOrder(1)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_BITORDER", 4380, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 1 values=[0, 1] default=0
+    getDefaultBitOrder()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_BITORDER", 4380, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setBitOrder(0)->OK
+
+   -> TwainSourceImpl::getIntCapability("ICAP_BITORDERCODES", 4390, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BITORDERCODES (FAILURE, CAPUNSUPPORTED)
+    getBitOrderCodes()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BITORDERCODES", 4390, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BITORDERCODES (FAILURE, CAPUNSUPPORTED)
+    getSupportedBitOrderCodes()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_BITORDERCODES", 4390, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BITORDERCODES (FAILURE, CAPUNSUPPORTED)
+    getDefaultBitOrderCodes()->Failed
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_BRIGHTNESS", 4353, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BRIGHTNESS (FAILURE, CAPUNSUPPORTED)
+    getBrightness()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_BRIGHTNESS", 4353, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BRIGHTNESS (FAILURE, CAPUNSUPPORTED)
+    getSupportedBrightness()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_BRIGHTNESS", 4353, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_BRIGHTNESS (FAILURE, CAPUNSUPPORTED)
+    getDefaultBrightness()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_CCITTKFACTOR", 4381, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_CCITTKFACTOR (FAILURE, CAPUNSUPPORTED)
+    getCCITTKFactor()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_COMPRESSION", 256, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 0
+    getCompression()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_COMPRESSION", 256, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setCompression(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_COMPRESSION", 256, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[0] default=0
+    getSupportedCompression()->{0}
+   -> TwainSourceImpl::setIntCapability("ICAP_COMPRESSION", 256, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setCompression(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_COMPRESSION", 256, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[0] default=0
+    getDefaultCompression()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_COMPRESSION", 256, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setCompression(0)->OK
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_CONTRAST", 4355, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_CONTRAST (FAILURE, CAPUNSUPPORTED)
+    getContrast()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_CONTRAST", 4355, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_CONTRAST (FAILURE, CAPUNSUPPORTED)
+    getSupportedContrast()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_CONTRAST", 4355, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_CONTRAST (FAILURE, CAPUNSUPPORTED)
+    getDefaultContrast()->Failed
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_EXPOSURETIME", 4357, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_EXPOSURETIME (FAILURE, CAPUNSUPPORTED)
+    getExposureTime()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_EXPOSURETIME", 4357, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_EXPOSURETIME (FAILURE, CAPUNSUPPORTED)
+    getSupportedExposureTime()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_EXPOSURETIME", 4357, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_EXPOSURETIME (FAILURE, CAPUNSUPPORTED)
+    getDefaultExposureTime()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_EXTIMAGEINFO", 4399, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_EXTIMAGEINFO (FAILURE, CAPUNSUPPORTED)
+    getExtImageInfo()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_FILTER", 4358, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_FILTER (FAILURE, CAPUNSUPPORTED)
+    getFilter()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_FLASHUSED2", 4422, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_FLASHUSED2 (FAILURE, CAPUNSUPPORTED)
+    getFlashUsed()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_FLASHUSED2", 4422, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_FLASHUSED2 (FAILURE, CAPUNSUPPORTED)
+    getSupportedFlashUsed()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_FLASHUSED2", 4422, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_FLASHUSED2 (FAILURE, CAPUNSUPPORTED)
+    getDefaultFlashUsed()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_FLIPROTATION", 4406, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_FLIPROTATION (FAILURE, CAPUNSUPPORTED)
+    getFlipRotation()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_GAMMA", 4360, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_GAMMA (FAILURE, CAPUNSUPPORTED)
+    getGamma()->Failed
+   -> TwainSourceImpl::getStringCapability("ICAP_HALFTONES", 4361, 9)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_HALFTONES (FAILURE, CAPUNSUPPORTED)
+    getHalftones()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_HIGHLIGHT", 4362, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_HIGHLIGHT (FAILURE, CAPUNSUPPORTED)
+    getHighlight()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_HIGHLIGHT", 4362, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_HIGHLIGHT (FAILURE, CAPUNSUPPORTED)
+    getSupportedHighlight()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_HIGHLIGHT", 4362, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_HIGHLIGHT (FAILURE, CAPUNSUPPORTED)
+    getDefaultHighlight()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_IMAGEDATASET", 4398, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_IMAGEDATASET (FAILURE, CAPUNSUPPORTED)
+    getImageDataSet()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_IMAGEFILEFORMAT", 4364, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 2
+    getImageFileFormat()->2
+   -> TwainSourceImpl::setIntCapability("ICAP_IMAGEFILEFORMAT", 4364, 4, 2)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setImageFileFormat(2)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_IMAGEFILEFORMAT", 4364, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 2 values=[2, 0] default=2
+    getSupportedImageFileFormat()->{2, 0}
+   -> TwainSourceImpl::setIntCapability("ICAP_IMAGEFILEFORMAT", 4364, 4, 2)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setImageFileFormat(2)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_IMAGEFILEFORMAT", 4364, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setImageFileFormat(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_IMAGEFILEFORMAT", 4364, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[2, 0] default=2
+    getDefaultImageFileFormat()->2
+   -> TwainSourceImpl::setIntCapability("ICAP_IMAGEFILEFORMAT", 4364, 4, 2)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setImageFileFormat(2)->OK
+
+   -> TwainSourceImpl::getIntCapability("ICAP_IMAGEFILTER", 4423, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_IMAGEFILTER (FAILURE, CAPUNSUPPORTED)
+    getImageFilter()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_IMAGEFILTER", 4423, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_IMAGEFILTER (FAILURE, CAPUNSUPPORTED)
+    getSupportedImageFilter()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_IMAGEFILTER", 4423, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_IMAGEFILTER (FAILURE, CAPUNSUPPORTED)
+    getDefaultImageFilter()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_JPEGPIXELTYPE", 4392, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_JPEGPIXELTYPE (FAILURE, CAPUNSUPPORTED)
+    getJPEGPixelType()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_JPEGPIXELTYPE", 4392, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_JPEGPIXELTYPE (FAILURE, CAPUNSUPPORTED)
+    getSupportedJPEGPixelType()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_JPEGPIXELTYPE", 4392, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_JPEGPIXELTYPE (FAILURE, CAPUNSUPPORTED)
+    getDefaultJPEGPixelType()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_JPEGQUALITY", 4435, 1)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_JPEGQUALITY (FAILURE, CAPUNSUPPORTED)
+    getJPEGQuality()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_JPEGQUALITY", 4435, 1, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_JPEGQUALITY (FAILURE, CAPUNSUPPORTED)
+    getSupportedJPEGQuality()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_JPEGQUALITY", 4435, 1, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_JPEGQUALITY (FAILURE, CAPUNSUPPORTED)
+    getDefaultJPEGQuality()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_LAMPSTATE", 4365, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_LAMPSTATE (FAILURE, CAPUNSUPPORTED)
+    getLampState()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_LAMPSTATE", 4365, 6, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_LAMPSTATE (FAILURE, CAPUNSUPPORTED)
+    getSupportedLampState()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_LAMPSTATE", 4365, 6, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_LAMPSTATE (FAILURE, CAPUNSUPPORTED)
+    getDefaultLampState()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_LIGHTPATH", 4382, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_LIGHTPATH (FAILURE, CAPUNSUPPORTED)
+    getLightPath()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_LIGHTPATH", 4382, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_LIGHTPATH (FAILURE, CAPUNSUPPORTED)
+    getSupportedLightPath()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_LIGHTPATH", 4382, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_LIGHTPATH (FAILURE, CAPUNSUPPORTED)
+    getDefaultLightPath()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_LIGHTSOURCE", 4366, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_LIGHTSOURCE (FAILURE, CAPUNSUPPORTED)
+    getLightSource()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_LIGHTSOURCE", 4366, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_LIGHTSOURCE (FAILURE, CAPUNSUPPORTED)
+    getSupportedLightSource()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_LIGHTSOURCE", 4366, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_LIGHTSOURCE (FAILURE, CAPUNSUPPORTED)
+    getDefaultLightSource()->Failed
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_MINIMUMHEIGHT", 4400, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_MINIMUMHEIGHT (FAILURE, CAPUNSUPPORTED)
+    getMinimumHeight()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_MINIMUMWIDTH", 4401, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_MINIMUMWIDTH (FAILURE, CAPUNSUPPORTED)
+    getMinimumWidth()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_NOISEFILTER", 4424, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_NOISEFILTER (FAILURE, CAPUNSUPPORTED)
+    getNoiseFilter()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_NOISEFILTER", 4424, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_NOISEFILTER (FAILURE, CAPUNSUPPORTED)
+    getSupportedNoiseFilter()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_NOISEFILTER", 4424, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_NOISEFILTER (FAILURE, CAPUNSUPPORTED)
+    getDefaultNoiseFilter()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_ORIENTATION", 4368, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_ORIENTATION (FAILURE, CAPUNSUPPORTED)
+    getOrientation()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_ORIENTATION", 4368, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_ORIENTATION (FAILURE, CAPUNSUPPORTED)
+    getSupportedOrientation()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_ORIENTATION", 4368, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_ORIENTATION (FAILURE, CAPUNSUPPORTED)
+    getDefaultOrientation()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_OVERSCAN", 4425, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_OVERSCAN (FAILURE, CAPUNSUPPORTED)
+    getOverscan()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_OVERSCAN", 4425, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_OVERSCAN (FAILURE, CAPUNSUPPORTED)
+    getSupportedOverscan()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_OVERSCAN", 4425, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_OVERSCAN (FAILURE, CAPUNSUPPORTED)
+    getDefaultOverscan()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODEDETECTIONENABLED", 4415, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODEDETECTIONENABLED (FAILURE, CAPUNSUPPORTED)
+    getPatchCodeDetectionEnabled()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODEMAXRETRIES", 4420, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODEMAXRETRIES (FAILURE, CAPUNSUPPORTED)
+    getPatchCodeMaxRetries()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODEMAXRETRIES", 4420, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODEMAXRETRIES (FAILURE, CAPUNSUPPORTED)
+    getSupportedPatchCodeMaxRetries()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODEMAXRETRIES", 4420, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODEMAXRETRIES (FAILURE, CAPUNSUPPORTED)
+    getDefaultPatchCodeMaxRetries()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODEMAXSEARCHPRIORITIES", 4417, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODEMAXSEARCHPRIORITIES (FAILURE, CAPUNSUPPORTED)
+    getPatchCodeMaxSearchPriorities()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODEMAXSEARCHPRIORITIES", 4417, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODEMAXSEARCHPRIORITIES (FAILURE, CAPUNSUPPORTED)
+    getSupportedPatchCodeMaxSearchPriorities()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODEMAXSEARCHPRIORITIES", 4417, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODEMAXSEARCHPRIORITIES (FAILURE, CAPUNSUPPORTED)
+    getDefaultPatchCodeMaxSearchPriorities()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODESEARCHMODE", 4419, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODESEARCHMODE (FAILURE, CAPUNSUPPORTED)
+    getPatchCodeSearchMode()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODESEARCHMODE", 4419, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODESEARCHMODE (FAILURE, CAPUNSUPPORTED)
+    getSupportedPatchCodeSearchMode()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODESEARCHMODE", 4419, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODESEARCHMODE (FAILURE, CAPUNSUPPORTED)
+    getDefaultPatchCodeSearchMode()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODETIMEOUT", 4421, 5)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODETIMEOUT (FAILURE, CAPUNSUPPORTED)
+    getPatchCodeTimeout()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODETIMEOUT", 4421, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODETIMEOUT (FAILURE, CAPUNSUPPORTED)
+    getSupportedPatchCodeTimeout()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PATCHCODETIMEOUT", 4421, 5, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PATCHCODETIMEOUT (FAILURE, CAPUNSUPPORTED)
+    getDefaultPatchCodeTimeout()->Failed
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_PHYSICALHEIGHT", 4370, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 14000.000000
+    getPhysicalHeight()->14000.0
+   -> TwainSourceImpl::getDoubleCapability("ICAP_PHYSICALWIDTH", 4369, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 8500.000000
+    getPhysicalWidth()->8500.0
+   -> TwainSourceImpl::getIntCapability("ICAP_PIXELFLAVOR", 4383, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 0
+    getPixelFlavor()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_PIXELFLAVOR", 4383, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPixelFlavor(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_PIXELFLAVOR", 4383, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[0, 1] default=0
+    getSupportedPixelFlavor()->{0, 1}
+   -> TwainSourceImpl::setIntCapability("ICAP_PIXELFLAVOR", 4383, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPixelFlavor(0)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_PIXELFLAVOR", 4383, 4, 1)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPixelFlavor(1)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_PIXELFLAVOR", 4383, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 1 values=[0, 1] default=0
+    getDefaultPixelFlavor()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_PIXELFLAVOR", 4383, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPixelFlavor(0)->OK
+
+   -> TwainSourceImpl::getIntCapability("ICAP_PIXELFLAVORCODES", 4391, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PIXELFLAVORCODES (FAILURE, CAPUNSUPPORTED)
+    getPixelFlavorCodes()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PIXELFLAVORCODES", 4391, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PIXELFLAVORCODES (FAILURE, CAPUNSUPPORTED)
+    getSupportedPixelFlavorCodes()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_PIXELFLAVORCODES", 4391, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_PIXELFLAVORCODES (FAILURE, CAPUNSUPPORTED)
+    getDefaultPixelFlavorCodes()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_PIXELTYPE", 257, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 2
+    getPixelType()->2
+   -> TwainSourceImpl::setIntCapability("ICAP_PIXELTYPE", 257, 4, 2)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPixelType(2)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_PIXELTYPE", 257, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 2 values=[0, 1, 2] default=2
+    getSupportedPixelType()->{0, 1, 2}
+   -> TwainSourceImpl::setIntCapability("ICAP_PIXELTYPE", 257, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPixelType(0)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_PIXELTYPE", 257, 4, 1)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPixelType(1)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_PIXELTYPE", 257, 4, 2)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPixelType(2)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_PIXELTYPE", 257, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 2 values=[0, 1, 2] default=2
+    getDefaultPixelType()->2
+   -> TwainSourceImpl::setIntCapability("ICAP_PIXELTYPE", 257, 4, 2)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPixelType(2)->OK
+
+   -> TwainSourceImpl::getIntCapability("ICAP_PLANARCHUNKY", 4384, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 0
+    getPlanarChunky()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_PLANARCHUNKY", 4384, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPlanarChunky(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_PLANARCHUNKY", 4384, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[0] default=0
+    getSupportedPlanarChunky()->{0}
+   -> TwainSourceImpl::setIntCapability("ICAP_PLANARCHUNKY", 4384, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPlanarChunky(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_PLANARCHUNKY", 4384, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[0] default=0
+    getDefaultPlanarChunky()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_PLANARCHUNKY", 4384, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setPlanarChunky(0)->OK
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_ROTATION", 4385, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_ROTATION (FAILURE, CAPUNSUPPORTED)
+    getRotation()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_ROTATION", 4385, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_ROTATION (FAILURE, CAPUNSUPPORTED)
+    getSupportedRotation()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_ROTATION", 4385, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_ROTATION (FAILURE, CAPUNSUPPORTED)
+    getDefaultRotation()->Failed
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_SHADOW", 4371, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_SHADOW (FAILURE, CAPUNSUPPORTED)
+    getShadow()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_SHADOW", 4371, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_SHADOW (FAILURE, CAPUNSUPPORTED)
+    getSupportedShadow()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_SHADOW", 4371, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_SHADOW (FAILURE, CAPUNSUPPORTED)
+    getDefaultShadow()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_SUPPORTEDPATCHCODETYPES", 4416, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_SUPPORTEDPATCHCODETYPES (FAILURE, CAPUNSUPPORTED)
+    getSupportedPatchCodeTypes()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_SUPPORTEDSIZES", 4386, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 3
+    getSupportedSizes()->3
+   -> TwainSourceImpl::setIntCapability("ICAP_SUPPORTEDSIZES", 4386, 4, 3)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <-
+    setSupportedSizes(3)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_SUPPORTEDSIZES", 4386, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 3 values=[0, 3, 4] default=3
+    getSupportedSupportedSizes()->{0, 3, 4}
+   -> TwainSourceImpl::setIntCapability("ICAP_SUPPORTEDSIZES", 4386, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <-
+    setSupportedSizes(0)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_SUPPORTEDSIZES", 4386, 4, 3)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <-
+    setSupportedSizes(3)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_SUPPORTEDSIZES", 4386, 4, 4)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <-
+    setSupportedSizes(4)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_SUPPORTEDSIZES", 4386, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 4 values=[0, 3, 4] default=3
+    getDefaultSupportedSizes()->3
+   -> TwainSourceImpl::setIntCapability("ICAP_SUPPORTEDSIZES", 4386, 4, 3)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <-
+    setSupportedSizes(3)->OK
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_THRESHOLD", 4387, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_THRESHOLD (FAILURE, CAPUNSUPPORTED)
+    getThreshold()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_THRESHOLD", 4387, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_THRESHOLD (FAILURE, CAPUNSUPPORTED)
+    getSupportedThreshold()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_THRESHOLD", 4387, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_THRESHOLD (FAILURE, CAPUNSUPPORTED)
+    getDefaultThreshold()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_TIMEFILL", 4394, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_TIMEFILL (FAILURE, CAPUNSUPPORTED)
+    getTimeFill()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_UNDEFINEDIMAGESIZE", 4397, 6)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_UNDEFINEDIMAGESIZE (FAILURE, CAPUNSUPPORTED)
+    getUndefinedImageSize()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_UNITS", 258, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 0
+    getUnits()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_UNITS", 258, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setUnits(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_UNITS", 258, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[0, 5, 1, 2, 3, 4] default=0
+    getSupportedUnits()->{0, 5, 1, 2, 3, 4}
+   -> TwainSourceImpl::setIntCapability("ICAP_UNITS", 258, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setUnits(0)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_UNITS", 258, 4, 5)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setUnits(5)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_UNITS", 258, 4, 1)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setUnits(1)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_UNITS", 258, 4, 2)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setUnits(2)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_UNITS", 258, 4, 3)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setUnits(3)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_UNITS", 258, 4, 4)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setUnits(4)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_UNITS", 258, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 4 values=[0, 5, 1, 2, 3, 4] default=0
+    getDefaultUnits()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_UNITS", 258, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setUnits(0)->OK
+
+   -> TwainSourceImpl::getIntCapability("ICAP_XFERMECH", 259, 4)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 0
+    getTransferMech()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_XFERMECH", 259, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setTransferMech(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_XFERMECH", 259, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[1, 2, 0] default=0
+    getSupportedTransferMech()->{1, 2, 0}
+   -> TwainSourceImpl::setIntCapability("ICAP_XFERMECH", 259, 4, 1)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setTransferMech(1)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_XFERMECH", 259, 4, 2)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setTransferMech(2)->OK
+   -> TwainSourceImpl::setIntCapability("ICAP_XFERMECH", 259, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setTransferMech(0)->OK
+   -> TwainSourceImpl::getIntCapability("ICAP_XFERMECH", 259, 4, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 0 values=[1, 2, 0] default=0
+    getDefaultTransferMech()->0
+   -> TwainSourceImpl::setIntCapability("ICAP_XFERMECH", 259, 4, 0)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setTransferMech(0)->OK
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_XNATIVERESOLUTION", 4374, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_XNATIVERESOLUTION (FAILURE, CAPUNSUPPORTED)
+    getXNativeResolution()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_XNATIVERESOLUTION", 4374, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_XNATIVERESOLUTION (FAILURE, CAPUNSUPPORTED)
+    getSupportedXNativeResolution()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_XNATIVERESOLUTION", 4374, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_XNATIVERESOLUTION (FAILURE, CAPUNSUPPORTED)
+    getDefaultXNativeResolution()->Failed
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_XRESOLUTION", 4376, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 200.000000
+    getXResolution()->200.0
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 200.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(200.0)->OK
+   -> TwainSourceImpl::getDoubleCapability("ICAP_XRESOLUTION", 4376, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 200.000000 values=[50.000000, 100.000000, 150.000000, 200.000000, 300.000000, 400.000000, 500.000000, 600.000000] default=200.000000
+    getSupportedXResolution()->{50.0, 100.0, 150.0, 200.0, 300.0, 400.0, 500.0, 600.0}
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 50.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(50.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 100.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(100.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 150.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(150.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 200.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(200.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 300.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(300.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 400.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(400.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 500.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(500.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 600.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(600.0)->OK
+   -> TwainSourceImpl::getDoubleCapability("ICAP_XRESOLUTION", 4376, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 600.000000 values=[50.000000, 100.000000, 150.000000, 200.000000, 300.000000, 400.000000, 500.000000, 600.000000] default=200.000000
+    getDefaultXResolution()->200.0
+   -> TwainSourceImpl::setDoubleCapability("ICAP_XRESOLUTION", 4376, 7, 200.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setXResolution(200.0)->OK
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_XSCALING", 4388, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_XSCALING (FAILURE, CAPUNSUPPORTED)
+    getXScaling()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_XSCALING", 4388, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_XSCALING (FAILURE, CAPUNSUPPORTED)
+    getSupportedXScaling()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_XSCALING", 4388, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_XSCALING (FAILURE, CAPUNSUPPORTED)
+    getDefaultXScaling()->Failed
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_YNATIVERESOLUTION", 4375, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_YNATIVERESOLUTION (FAILURE, CAPUNSUPPORTED)
+    getYNativeResolution()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_YNATIVERESOLUTION", 4375, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_YNATIVERESOLUTION (FAILURE, CAPUNSUPPORTED)
+    getSupportedYNativeResolution()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_YNATIVERESOLUTION", 4375, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_YNATIVERESOLUTION (FAILURE, CAPUNSUPPORTED)
+    getDefaultYNativeResolution()->Failed
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_YRESOLUTION", 4377, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [SUCCESS, SUCCESS]
+   <- 200.000000
+    getYResolution()->200.0
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 200.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(200.0)->OK
+   -> TwainSourceImpl::getDoubleCapability("ICAP_YRESOLUTION", 4377, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 200.000000 values=[50.000000, 100.000000, 150.000000, 200.000000, 300.000000, 400.000000, 500.000000, 600.000000] default=200.000000
+    getSupportedYResolution()->{50.0, 100.0, 150.0, 200.0, 300.0, 400.0, 500.0, 600.0}
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 50.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(50.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 100.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(100.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 150.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(150.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 200.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(200.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 300.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(300.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 400.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(400.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 500.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(500.0)->OK
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 600.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(600.0)->OK
+   -> TwainSourceImpl::getDoubleCapability("ICAP_YRESOLUTION", 4377, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [SUCCESS, SUCCESS]
+   <- 600.000000 values=[50.000000, 100.000000, 150.000000, 200.000000, 300.000000, 400.000000, 500.000000, 600.000000] default=200.000000
+    getDefaultYResolution()->200.0
+   -> TwainSourceImpl::setDoubleCapability("ICAP_YRESOLUTION", 4377, 7, 200.000000)
+      [CONTROL, CAPABILITY, SET] -> [SUCCESS, SUCCESS]
+   <-
+    setYResolution(200.0)->OK
+
+   -> TwainSourceImpl::getDoubleCapability("ICAP_YSCALING", 4389, 7)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_YSCALING (FAILURE, CAPUNSUPPORTED)
+    getYScaling()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_YSCALING", 4389, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_YSCALING (FAILURE, CAPUNSUPPORTED)
+    getSupportedYScaling()->Failed
+   -> TwainSourceImpl::getDoubleCapability("ICAP_YSCALING", 4389, 7, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_YSCALING (FAILURE, CAPUNSUPPORTED)
+    getDefaultYScaling()->Failed
+
+   -> TwainSourceImpl::getIntCapability("ICAP_ZOOMFACTOR", 4414, 1)
+      [CONTROL, CAPABILITY, GETCURRENT] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_ZOOMFACTOR (FAILURE, CAPUNSUPPORTED)
+    getZoomFactor()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_ZOOMFACTOR", 4414, 1, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_ZOOMFACTOR (FAILURE, CAPUNSUPPORTED)
+    getSupportedZoomFactor()->Failed
+   -> TwainSourceImpl::getIntCapability("ICAP_ZOOMFACTOR", 4414, 1, ...)
+      [CONTROL, CAPABILITY, GET] -> [FAILURE, CAPUNSUPPORTED]
+      -- Capability not supported by source
+   <- exception: Failed to get capability ICAP_ZOOMFACTOR (FAILURE, CAPUNSUPPORTED)
+    getDefaultZoomFactor()->Failed
+
+Start loading image from 'TWAIN2 FreeImage Software Scanner' ...
+   -> TwainSourceImpl::acquireImage(1)
+      -> TwainSourceImpl::enable(1)
+         [CONTROL, USERINTERFACE, ENABLEDS] -> [CHECKSTATUS, BADPROTOCOL]
+         -- Unrecognized MSG DG DAT combination
+         state: DS_OPEN -> DS_ENABLED
+      <-
+      MSG_XFERREADY -> OK
+      state: -> TRANSFER_READY
+      -> TwainSourceImpl::transferNativeImage()
+         [IMAGE, IMAGELAYOUT, GET] -> [SUCCESS, SUCCESS]
+         frame 0:  0.00/ 8.50x 0.00/11.00
+         [IMAGE, IMAGEINFO, GET] -> [SUCCESS, SUCCESS]
+         size: 1700x2200x24
+         [IMAGE, IMAGENATIVEXFER, GET] -> [XFERDONE, SUCCESS]
+         state: -> TRANSFERRING
+         transfer done 6
+         -> TwainSourceImpl::finishTransfer()
+            [CONTROL, PENDINGXFERS, ENDXFER] -> [SUCCESS, SUCCESS]
+            pending transfers count, eoj: 0, 0
+            state: DS_TRANSFERING -> DS_ENABLED
+         <-
+      <- 511246400
+      -> TwainSourceImpl::close()
+         -> TwainSourceImpl::disable()
+            state: DS_ENABLED -> DS_OPEN
+         <-
+         state: DS_OPEN -> DSM_OPEN
+      <-
+   <- 511246400
+
+OK
+    getActualXResolution()->200.0
+    getActualYResolution()->200.0
+    getActualImageWidthn()->1700
+    getActualImageLength()->2200
+    getActualBitsPerPixel()->24
+    getActualPixelType()->2
+   -> TwainManagerImpl::~TwainManagerImpl()
+      -> TwainSourceImpl::~TwainSourceImpl()
+      <-
+      [CONTROL, PARENT, CLOSEDSM] -> [SUCCESS, BUMMER]
+      -- Failure due to unknown causes
+      state: DSM_OPEN -> DSM_LOADED
+      state: DSM_LOADED -> PRESESSION
+   <-
