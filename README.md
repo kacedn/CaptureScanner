@@ -1,7 +1,7 @@
 # CaptureScanner
 Framework test => Morena - Image Acquisition Framework version 6.4.0.12
 
-## DEFINITION
+## DEFINITIONS
 ## Twain
 TWAIN (Technology Without An Interesting Name), an image capture API for Microsoft Windows and Apple Macintosh operating systems. Introduced in 1992, and is currently ratified at version 1.9 (as of January 2000). Standard is maintained by TWAIN Working Group, a not-profit organization which represents the imaging industry.
 
@@ -14,7 +14,7 @@ SANE (Scanner Access Now Easy), an image capture API for Unix and Unix-like oper
  * TWAIN DSM (Data Source Manager) for local Windows or MacOS X machine, or SANE network daemon listening on local or remote unix machine,
  * Some image acquisition hardware with driver properly installed and configured.
 
-# LINK
+# LINKS
 
 ## Protocols
  * Twain => http://www.twain.org/
@@ -23,10 +23,10 @@ SANE (Scanner Access Now Easy), an image capture API for Unix and Unix-like oper
 
 ## Framework Morena 6
  * Framework Morena 6 => http://www.gnome.sk/Twain/jtp.html
- * http://www.gnome.eu/Twain/doc/api/index.html
+ * Api => http://www.gnome.eu/Twain/doc/api/index.html
  * Tutorial => http://www.gnome.eu/Twain/doc/tutorial/tutorial.html
 
 ## Framework Morena 7
  * Framework Morena 7 => http://www.gnome.sk/Morena/morena.html
- * http://www.gnome.eu/Morena/doc/api/index.html
+ * Api => http://www.gnome.eu/Morena/doc/api/index.html
  * Tutorial => http://www.gnome.eu/Morena/doc/tutorial7.html
