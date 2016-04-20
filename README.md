@@ -18,6 +18,7 @@ SANE (Scanner Access Now Easy), an image capture API for Unix and Unix-like oper
 
 ## Protocols
  * Twain => http://www.twain.org/
+ * Twain specification => http://www.twain.org/scannerdriverdevelopers/specification-and-tools.html
  * Sane => www.sane-project.org
  * Wia => https://msdn.microsoft.com/en-us/library/windows/desktop/ms630368(v=vs.85).aspx
 
@@ -25,6 +26,7 @@ SANE (Scanner Access Now Easy), an image capture API for Unix and Unix-like oper
  * Framework Morena 6 => http://www.gnome.sk/Twain/jtp.html
  * Api => http://www.gnome.eu/Twain/doc/api/index.html
  * Tutorial => http://www.gnome.eu/Twain/doc/tutorial/tutorial.html
+ * Resources Support => http://www.gnome.sk/Twain/jtp_support.html
 
 ## Framework Morena 7
  * Framework Morena 7 => http://www.gnome.sk/Morena/morena.html
