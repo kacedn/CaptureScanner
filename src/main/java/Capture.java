@@ -35,14 +35,15 @@ public class Capture {
         TwainSource source=TwainManager.selectSource(null);
         System.err.println("Selected source is "+source);
 
-        TwainActivity twActivity = new TwainActivity(null, source.toString());
+        // affichage de toute les capabilities
+        //TwainActivity twActivity = new TwainActivity(null, source.toString());
+        //ArrayList<Capability> capabilities = twActivity.getCapabilities();
+        //
+        //System.err.println("Capabilities of source : "+source.toString());
+        //for (Capability cap:capabilities) {
+        //    System.err.println("Capability name : "+cap.getName());
+        //}
 
-        ArrayList<Capability> capabilities = twActivity.getCapabilities();
-
-        System.err.println("Capabilities of source : "+source.toString());
-        for (Capability cap:capabilities) {
-            System.err.println("Capability name : "+cap.getName());
-        }
         if (source!=null){
 // Step 2 : Configuration de la source
 
@@ -70,15 +71,14 @@ public class Capture {
             System.err.println("Image resolution is "+source.getResolution());
 
             // Functionnality "Duplex scanning" => scan recto verso
-            int isDuplexAvailable = ((TwainSource)source).getDuplex(); // Gets CAP_DUPLEX capability value.
-            System.out.println("CAP_DUPLEX : " + isDuplexAvailable);
-            if(((TwainSource)source).getDuplexEnabled()){
-                ((TwainSource)source).setDuplexEnabled(true);
-            }
+            //int isDuplexAvailable = ((TwainSource)source).getDuplex(); // Gets CAP_DUPLEX capability value.
+            //System.out.println("CAP_DUPLEX : " + isDuplexAvailable);
+            //if(((TwainSource)source).getDuplexEnabled()){
+            //    ((TwainSource)source).setDuplexEnabled(true);
+            //}
 
 // Step 3 : Capture image
-
-            // Automatic Document Feeder
+            // Automatic Document Feeder, parametrage pour lancer la capture sans limite
             int numberLimitPageToScan = -1; // -1 pour tout scanner dans la bannette
             source.setFeederEnabled(true);
             source.setAutoFeed(true);
@@ -96,19 +96,33 @@ public class Capture {
                         +image.getHeight()+" x "
                         +image.getPixelSize());
 
-                int bitsPerPixel = source.getActualBitsPerPixel();
-//                int	getActualBitsPerPixel()
-//                Gets TW_IMAGEINFO.BitsPerPixel.
-//                int	getActualImageLength()
-//                Gets TW_IMAGEINFO.ImageLength.
-//                int	getActualImageWidth()
-//                Gets TW_IMAGEINFO.ImageWidth.
-//                int	getActualPixelType()
-//                Gets TW_IMAGEINFO.PixelType.
-//                double	getActualXResolution()
-//                Gets TW_IMAGEINFO.XResolution.
-//                double	getActualYResolution()
-//                Gets TW_IMAGEINFO.YResolution.
+                //int bitsPerPixel = source.getActualBitsPerPixel();
+                //source.getEndorser();
+                //source.getCameraPreviewUI();
+                //
+                //int	getActualBitsPerPixel()
+                //Gets TW_IMAGEINFO.BitsPerPixel.
+                //int	getActualImageLength()
+                //Gets TW_IMAGEINFO.ImageLength.
+                //int	getActualImageWidth()
+                //Gets TW_IMAGEINFO.ImageWidth.
+                //int	getActualPixelType()
+                //Gets TW_IMAGEINFO.PixelType.
+                //double	getActualXResolution()
+                //Gets TW_IMAGEINFO.XResolution.
+                //double	getActualYResolution()
+                //Gets TW_IMAGEINFO.YResolution.
+
+                // Je n'ai pas trouvé de méthode dans le framework Morena java pour récupérer les extended image info.
+                // Il faut peut etre utilisé la class Twain
+                // triplets                DGImage,DAT_EXTIMAGEINFO,GET
+
+                // Dans mes tests de twain en dotnet, je cherchais à récupérer les extended image info ci-dessous
+                //ListExtentedInfo=e.GetExtImageInfo(
+                //        ExtendedImageInfo.Camera, ExtendedImageInfo.EndorsedText,
+                //        ExtendedImageInfo.PageNumber, ExtendedImageInfo.PageSide,
+                //        ExtendedImageInfo.FrameNumber, ExtendedImageInfo.BookName
+                //).ToList();
             }
             while (source.hasMoreImages());
         }

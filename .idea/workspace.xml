@@ -27,180 +27,10 @@
       <file leaf-file-name="Capture.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Capture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
+            <state relative-caret-position="306">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Capabilities.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/src/lib/morena.jar!/SK/gnome/capabilities/Capabilities.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding>
-                <element signature="method#getCapability#0;class#Capabilities#0" expanded="false" />
-                <element signature="method#makeFileNameValid#0;class#Capabilities#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwainFrameBR_XCapability.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morena-6.4.0.12/examples/MorenaCapabilities/src/SK/gnome/capabilities/twain/TwainFrameBR_XCapability.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2514#2515#0" expanded="false" />
-                <element signature="e#2535#2536#0" expanded="false" />
-                <element signature="e#2571#2572#0" expanded="false" />
-                <element signature="e#2592#2593#0" expanded="false" />
-                <element signature="e#2974#2975#0" expanded="false" />
-                <element signature="e#3013#3014#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwainFrameCapability.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morena-6.4.0.12/examples/MorenaCapabilities/src/SK/gnome/capabilities/twain/TwainFrameCapability.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#1706#0" expanded="false" />
-                <element signature="e#556#557#0" expanded="false" />
-                <element signature="e#600#601#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwainFrameTL_XCapability.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morena-6.4.0.12/examples/MorenaCapabilities/src/SK/gnome/capabilities/twain/TwainFrameTL_XCapability.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#2899#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1479#1480#0" expanded="false" />
-                <element signature="e#1498#1499#0" expanded="false" />
-                <element signature="e#2297#2298#0" expanded="false" />
-                <element signature="e#2318#2319#0" expanded="false" />
-                <element signature="e#2354#2355#0" expanded="false" />
-                <element signature="e#2375#2376#0" expanded="false" />
-                <element signature="e#2859#2860#0" expanded="false" />
-                <element signature="e#2894#2895#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwainSelectCapabilitiesDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morena-6.4.0.12/examples/MorenaCapabilities/src/SK/gnome/capabilities/twain/TwainSelectCapabilitiesDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#6573#6574#0" expanded="false" />
-                <element signature="e#6642#6643#0" expanded="false" />
-                <element signature="e#6702#6703#0" expanded="false" />
-                <element signature="e#6790#6791#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwainActivity.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/src/lib/morena.jar!/SK/gnome/capabilities/twain/TwainActivity.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="156" column="69" selection-start-line="156" selection-start-column="69" selection-end-line="156" selection-end-column="69" />
-              <folding>
-                <element signature="method#TwainActivity#0;class#TwainActivity#0" expanded="false" />
-                <element signature="method#openTwainSource#0;class#TwainActivity#0" expanded="false" />
-                <element signature="method#showDialogWindow#0;class#TwainActivity#0" expanded="false" />
-                <element signature="method#getPreviewImage#0;class#TwainActivity#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#TwainActivity#0" expanded="false" />
-                <element signature="method#close#0;class#TwainActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MorenaCapabilitiesExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morena-6.4.0.12/examples/MorenaCapabilities/src/MorenaCapabilitiesExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="404" column="3" selection-start-line="404" selection-start-column="3" selection-end-line="404" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#13040#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="class#AcquireImageAction#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="e#2597#2598#0" expanded="false" />
-                <element signature="e#2658#2659#0" expanded="false" />
-                <element signature="class#SelectSourceAction#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="e#2944#2945#0" expanded="false" />
-                <element signature="e#3007#3008#0" expanded="false" />
-                <element signature="class#CustomDialogAction#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="e#3355#3356#0" expanded="false" />
-                <element signature="e#3425#3426#0" expanded="false" />
-                <element signature="method#acquireImage#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="class#HelpAction#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="e#5185#5186#0" expanded="false" />
-                <element signature="e#5239#5240#0" expanded="false" />
-                <element signature="class#AboutAction#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="e#6336#6337#0" expanded="false" />
-                <element signature="e#6391#6392#0" expanded="false" />
-                <element signature="class#SaveImageAction#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="e#9429#9430#0" expanded="false" />
-                <element signature="e#9467#9468#0" expanded="false" />
-                <element signature="class#MouseListener#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="method#select#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="class#ImagePanel#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="e#10294#10295#0" expanded="false" />
-                <element signature="e#10320#10321#0" expanded="false" />
-                <element signature="method#init#0;class#MorenaCapabilitiesExample#0" expanded="false" />
-                <element signature="method#init#1;class#MorenaCapabilitiesExample#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morena-6.4.0.12/examples/MorenaCapabilities/src/SK/gnome/capabilities/twain/TwainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="208" column="9" selection-start-line="208" selection-start-column="9" selection-end-line="208" selection-end-column="64" />
-              <folding>
-                <element signature="e#0#17373#0" expanded="false" />
-                <element signature="initializer##0;class#TwainActivity#0" expanded="false" />
-                <element signature="method#openTwainSource#0;class#TwainActivity#0" expanded="false" />
-                <element signature="method#showDialogWindow#0;class#TwainActivity#0" expanded="false" />
-                <element signature="method#getPreviewImage#0;class#TwainActivity#0" expanded="false" />
-                <element signature="e#16906#16907#0" expanded="false" />
-                <element signature="e#16940#16941#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#TwainActivity#0" expanded="false" />
-                <element signature="e#17177#17178#0" expanded="false" />
-                <element signature="e#17200#17201#0" expanded="false" />
-                <element signature="method#close#0;class#TwainActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -225,8 +55,8 @@
       <list>
         <option value="$PROJECT_DIR$/morena-6.4.0.12/examples/src/HelloWorld.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Capture.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/Capture.java" />
       </list>
     </option>
   </component>
@@ -1073,12 +903,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1461072838463</updated>
-      <workItem from="1461072840272" duration="26323000" />
+      <workItem from="1461072840272" duration="30163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26323000" />
+    <option name="totallyTimeSpent" value="30163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1554" height="916" extended-state="6" />
@@ -1571,16 +1401,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        <state relative-caret-position="209">
+          <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Capture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
+        <state relative-caret-position="306">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
