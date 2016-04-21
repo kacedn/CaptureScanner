@@ -28,6 +28,11 @@ SANE (Scanner Access Now Easy), an image capture API for Unix and Unix-like oper
  * Tutorial => http://www.gnome.eu/Twain/doc/tutorial/tutorial.html
  * Resources Support => http://www.gnome.sk/Twain/jtp_support.html
 
+#### Morena test online
+ * http://www.gnome.eu/Twain/examples/studio.html
+ * http://www.gnome.eu/Twain/examples/capabilities.html
+
+
 ## Framework Morena 7
  * Framework Morena 7 => http://www.gnome.sk/Morena/morena.html
  * Api => http://www.gnome.eu/Morena/doc/api/index.html

@@ -8,6 +8,8 @@ import SK.gnome.twain.TwainManager;
 import SK.gnome.twain.TwainSource;
 import SK.gnome.capabilities.*;
 
+import javax.xml.transform.Source;
+import java.awt.image.ColorModel;
 import java.util.ArrayList;
 
 /**
@@ -87,10 +89,26 @@ public class Capture {
             {
                 //scanning activity
                 MorenaImage image=new MorenaImage(source);
+
+// Step 4 : Recupération des info sur l'image scanné
                 System.err.println("Size of acquired image "+(count++)+" is "
                         +image.getWidth()+" x "
                         +image.getHeight()+" x "
                         +image.getPixelSize());
+
+                int bitsPerPixel = source.getActualBitsPerPixel();
+//                int	getActualBitsPerPixel()
+//                Gets TW_IMAGEINFO.BitsPerPixel.
+//                int	getActualImageLength()
+//                Gets TW_IMAGEINFO.ImageLength.
+//                int	getActualImageWidth()
+//                Gets TW_IMAGEINFO.ImageWidth.
+//                int	getActualPixelType()
+//                Gets TW_IMAGEINFO.PixelType.
+//                double	getActualXResolution()
+//                Gets TW_IMAGEINFO.XResolution.
+//                double	getActualYResolution()
+//                Gets TW_IMAGEINFO.YResolution.
             }
             while (source.hasMoreImages());
         }
